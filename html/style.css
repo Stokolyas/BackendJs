@@ -1,0 +1,14 @@
+#block1 {
+    border-top: 100px;
+    font-size: 40px;
+    margin-top: 1%;
+    background-color:  yellowgreen;
+    text-shadow: 1px 1px 1px
+}
+#block2 {
+    font-size: 20px;
+    margin-right: 10%;
+    padding-top: 20%;
+    margin-left: 10%;
+    color: burlywood;
+}
