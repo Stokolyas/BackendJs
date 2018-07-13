@@ -1,0 +1,20 @@
+{
+  "name": "BackendJs",
+  "version": "1.0.0",
+  "description": "Я , торжественно клянусь пройти данный курс до конца и стать самым лучшим back-end разработчиком.",
+  "main": "project1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stokolyas/BackendJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stokolyas/BackendJs/issues"
+  },
+  "homepage": "https://github.com/Stokolyas/BackendJs#readme"
+}
