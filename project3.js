@@ -17,14 +17,14 @@ function catsGroupGenerate(n, name = 'Luis') {
     }
     catList[i] = cat.name + ' ' + cat.age + ' ' + cat.gender + ' ' + +cat.legsCount + ' ' + cat.tailLength + ' '
   }
-  return console.log(catList) //возвращение массива котов
+  return catList//возвращение массива котов
 }
 // возвращение имен котов
 function back_Cat_Name(list) {
   var backName = [];
   for (var i = 0; i < list.length; i++) {
     if (list[0].indexOf('Kail') == 0) {
-      backName[i] += 'Kail '
+      backName[i] += 'Kail'
     }
     if (list[0].indexOf('Hell') == 0) {
       backName[i] += 'Hell '
@@ -55,7 +55,7 @@ function oldCats(n) {
 }
 // молодые кошки
 function youngCats(n) {
-  catList = list
+  var catList = list
   var countYoungCats = 0
   for (var i = 0; i < catList.length; i++) {
     if (catList[i].indexOf("w") > 0) {
@@ -70,8 +70,8 @@ function youngCats(n) {
 }
 // счетчик имен
 function nameStats(list) {
-  var catName = '';
-  var nameKail = 0,
+  var catName = '',
+    nameKail = 0,
     nameJohn = 0,
     nameHell = 0,
     nameGarry = 0;
@@ -94,7 +94,7 @@ function nameStats(list) {
 
     }
   }
-  alert('Name Kail ' + nameKail + ' Name Jonh ' + nameJohn + ' Name Garry ' + nameGarry + ' Name Hell ' + nameHell)
+  return('Name Kail ' + nameKail + ' Name Jonh ' + nameJohn + ' Name Garry ' + nameGarry + ' Name Hell ' + nameHell)
 }
 // класс котов
 class Cat {
@@ -114,11 +114,12 @@ class Cat {
 // Котофабрика
 function catFactory(Cat){
   cat.gender = 'm'
+  return cat.gender
 }
 
 let cat = new Cat() // создание объекта класса
 catFactory() // вызов котофабрики
-var list = catsGroupGenerate(9) // генерация массива котов
+var list = catsGroupGenerate(999) // генерация массива котов
 var NamesCats = nameStats(list) //счет имен котов
 var listName = back_Cat_Name(list) // вывод имен котов
 oldCats(9)
