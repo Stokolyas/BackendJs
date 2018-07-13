@@ -9,16 +9,15 @@ function pick(list) {
 }
 // генерация групп котов
 function catsGroupGenerate(n, name = 'Luis') {
-  var catList = [],
-  for (i = 0; i < n; i++) {
+  var catList = []
+  for (var i = 0; i < n; i++) {
     let cat = new Cat()
-    cat.catFactory()
     if (cat.name == 'Kail') {
       cat.name = name
     }
     catList[i] = cat.name + ' ' + cat.age + ' ' + cat.gender + ' ' + +cat.legsCount + ' ' + cat.tailLength + ' '
   }
-  return catList //возвращение массива котов
+  return console.log(catList) //возвращение массива котов
 }
 // возвращение имен котов
 function back_Cat_Name(list) {
@@ -100,10 +99,10 @@ function nameStats(list) {
 // класс котов
 class Cat {
 
-  constructor(name, age, gender, legsCount, tailLength) {
-    catName = ['Kail', 'John', 'Hell', 'Garry']
+  constructor(catName, catGender, name, age, gender, legsCount, tailLength) {
+    catName = ['Kail','John','Hell','Garry']
     this.name = pick(catName)
-    catGender = ['m', 'w']
+    catGender = ['m','w']
     this.age = Math.floor(Math.random(0, 30) * (30 + 1))
     this.gender = pick(catGender)
     this.legsCount = Math.floor(Math.random(1, 4) * (4) + 1)
@@ -111,13 +110,16 @@ class Cat {
   }
 
 }
+
 // Котофабрика
-function catFactory(cat) {
+function catFactory(Cat){
   cat.gender = 'm'
-  alert(this)
 }
+
 let cat = new Cat() // создание объекта класса
-cat.catFactory() // вызов котофабрики
+catFactory() // вызов котофабрики
 var list = catsGroupGenerate(9) // генерация массива котов
 var NamesCats = nameStats(list) //счет имен котов
 var listName = back_Cat_Name(list) // вывод имен котов
+oldCats(9)
+youngCats(9)
