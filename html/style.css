@@ -1,5 +1,16 @@
 #block1 {
     border-top: 100px;
+    border-left: 100px;
+    border-right: 100px;
+    border-bottom: 100px;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 40px;
     margin-top: 1%;
     background-color:  yellowgreen;

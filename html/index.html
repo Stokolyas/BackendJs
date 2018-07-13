@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="block1">
-    Стоколяс Алексей Валерьевич
+    <div class="container-fluid">
+        <div class="col-md-9 col-md-push-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Стоколяс Алексей Валерьевич</h1>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="block2">
-    XML не является заменой HTML. 
-    Они предназначены для решения разных задач: XML решает задачу хранения и транспортировки данных,
-    фокусируясь на том, что такое эти самые данные, HTML же решает задачу отображения данных, 
-    фокусируясь на том, как эти данные выглядят.
-    Таким образом, HTML заботится об отображении информации, а XML о транспортировке информации.
+    <div class="col-md-9 col-md-push-3">
+        <h2>XML</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel">
+                    <h4>Разница между XML и HTML</h4>
+                    <p>XML не является заменой HTML. Они предназначены для решения разных задач: XML решает задачу хранения
+                        и транспортировки данных, фокусируясь на том, что такое эти самые данные, HTML же решает задачу отображения
+                        данных, фокусируясь на том, как эти данные выглядят. Таким образом, HTML заботится об отображении
+                        информации, а XML о транспортировке информации.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
