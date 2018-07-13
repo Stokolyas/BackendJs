@@ -8,12 +8,12 @@ function pick(list) {
   return list[randomPick]
 }
 // генерация групп котов
-function catsGroupGenerate(n, name = 'Luis') {
+function catsGroupGenerate(n, gender = 'm') {
   var catList = []
   for (var i = 0; i < n; i++) {
     let cat = new Cat()
-    if (cat.name == 'Kail') {
-      cat.name = name
+    if (cat.gender == 'w') {
+      cat.gender = 'm'
     }
     catList[i] = cat.name + ' ' + cat.age + ' ' + cat.gender + ' ' + +cat.legsCount + ' ' + cat.tailLength + ' '
   }
@@ -21,26 +21,27 @@ function catsGroupGenerate(n, name = 'Luis') {
 }
 // возвращение имен котов
 function back_Cat_Name(list) {
-  var backName = [];
+  var backName = [''];
   for (var i = 0; i < list.length; i++) {
-    if (list[0].indexOf('Kail') == 0) {
-      backName[i] += 'Kail'
+    if (list[i].indexOf('Kail ') == 0) {
+      backName[i] = 'Kail '
     }
-    if (list[0].indexOf('Hell') == 0) {
-      backName[i] += 'Hell '
+    if (list[i].indexOf('Hell') == 0) {
+      backName[i] = 'Hell '
+
     }
-    if (list[0].indexOf('Garry') == 0) {
-      backName[i] += 'Garry '
+    if (list[i].indexOf('Gary') == 0) {
+      backName[i] = 'Gary '
     }
-    if (list[0].indexOf('John') == 0) {
-      backName[i] += 'John '
+    if (list[i].indexOf('John') == 0) {
+      backName[i] = 'John '
     }
   }
   return backName
 }
 // старые коты    catList[i].substr(n+1,2)
 function oldCats(n) {
-  var catList = list
+  var catList = catsGroupGenerate(n)
   var countOldCats = 0
   for (var i = 0; i < catList.length; i++) {
     if (catList[i].indexOf("m") > 0) {
@@ -51,56 +52,53 @@ function oldCats(n) {
     }
 
   }
-  return countOldCats
+  return countOldCats>0
 }
 // молодые кошки
 function youngCats(n) {
-  var catList = list
-  var countYoungCats = 0
+  var catList = catsGroupGenerate(n)
+  var nameYoungCats = []
   for (var i = 0; i < catList.length; i++) {
     if (catList[i].indexOf("w") > 0) {
       if (catList[i].substr(catList[i].indexOf("w") - 3, 2) > 5) {
-        countYoungCats++
+        nameYoungCats += catList[i].substr(0,5)
       }
 
     }
 
   }
-  return countYoungCats
+  return nameYoungCats
 }
 // счетчик имен
 function nameStats(list) {
   var catName = '',
-    nameKail = 0,
-    nameJohn = 0,
-    nameHell = 0,
-    nameGarry = 0;
+    countName = [0,0,0,0]
   for (var i = 0; i < list.length; i++) {
     catName = list[i]
     switch (catName[0]) { //обработка каждого первого символа
       case 'K':
-        ++nameKail
+        ++countName[0]
         break;
       case 'J':
-        ++nameJohn
+        ++countName[1]
         break;
       case 'H':
-        ++nameHell
+        ++countName[2]
         break;
       case 'G':
-        ++nameGarry
+        ++countName[3]
         break;
       default:
 
     }
   }
-  return('Name Kail ' + nameKail + ' Name Jonh ' + nameJohn + ' Name Garry ' + nameGarry + ' Name Hell ' + nameHell)
+  return countName
 }
 // класс котов
 class Cat {
 
   constructor(catName, catGender, name, age, gender, legsCount, tailLength) {
-    catName = ['Kail','John','Hell','Garry']
+    catName = ['Kail','John','Hell','Gary']
     this.name = pick(catName)
     catGender = ['m','w']
     this.age = Math.floor(Math.random(0, 30) * (30 + 1))
@@ -119,9 +117,9 @@ function catFactory(Cat){
 
 let cat = new Cat() // создание объекта класса
 catFactory() // вызов котофабрики
-var list = catsGroupGenerate(999) // генерация массива котов
+var list =[]
+  list = catsGroupGenerate(9) // генерация массива котов
 var NamesCats = nameStats(list) //счет имен котов
 var listName = back_Cat_Name(list) // вывод имен котов
-alert(catsGroupGenerate(999).length)
 oldCats(9)
 youngCats(9)
