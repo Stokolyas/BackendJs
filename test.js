@@ -9,7 +9,7 @@ describe("Test", function() {
         });
         
         it("Генератор массива котов", function() {
-            assert.equal(catsGroupGenerate().length, 0);
+            assert.equal(catsGroupGenerate().length, 999);
         });
       }
   

@@ -122,5 +122,6 @@ catFactory() // вызов котофабрики
 var list = catsGroupGenerate(999) // генерация массива котов
 var NamesCats = nameStats(list) //счет имен котов
 var listName = back_Cat_Name(list) // вывод имен котов
+alert(catsGroupGenerate(999).length)
 oldCats(9)
 youngCats(9)
