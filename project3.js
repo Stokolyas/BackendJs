@@ -110,7 +110,7 @@ class Cat {
 }
 
 // Котофабрика
-function catFactory(Cat, loudness = require('loudness');) {
+function catFactory(Cat, loudness = require('loudness')) {
 
   cat.gender = 'm'
   return cat.gender
