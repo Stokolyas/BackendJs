@@ -1,12 +1,7 @@
 //1 - 5
 'use strict';
-// генератор случайных чисел
-function pick(list) {
-  var max = list.length - 1
-  var min = 0
-  var randomPick = Math.floor(Math.random(max) * (max - min + 1)) + min;
-  return list[randomPick]
-}
+import {catFactory} from "./project2.js";
+import Cat from "./project2.js";
 // генерация групп котов
 function catsGroupGenerate(n) {
   var catList = []
@@ -92,27 +87,6 @@ function nameStats(list) {
     }
   }
   return countName
-}
-
-const catName = ['Kail', 'John', 'Hell', 'Gary']
-const catGender = ['m', 'w']
-
-// класс котов
-class Cat {
-
-  constructor() {
-    this.name = pick(catName)
-    this.age = Math.floor(Math.random(0, 30) * (30 + 1))
-    this.gender = pick(catGender)
-    this.legsCount = Math.floor(Math.random(1, 4) * 4 + 1)
-    this.tailLength = Math.floor(Math.random(2, 30) * (30 - 1) + 2)
-  }
-}
-
-// Котофабрика
-function catFactory() {
-
-  return cat
 }
 
 let cat = new Cat() // создание объекта класса

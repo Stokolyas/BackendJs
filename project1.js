@@ -1,8 +1,7 @@
-var list = ['java','js','python','c++']
-function pick(list){
-  max = list.length
+// генератор случайных чисел
+export function pick(list) {
+  var max = list.length - 1
   var min = 0
   var randomPick = Math.floor(Math.random(min, max) * (max - min + 1)) + min;
-  alert(list[randomPick])
+  return list[randomPick]
 }
-pick(list)
