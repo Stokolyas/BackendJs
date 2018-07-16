@@ -3,19 +3,20 @@ describe("Test", function() {
     describe("Класс кот", function() {
   
       function makeTest(cat) {
-        var expected = 'm';
+        var expected = 'object';
         it("Котофабрика ", function() {
-          assert.equal(catFactory(), expected);
+          assert.equal(typeof(catFactory()), expected);
         });
         
         it("Генератор массива котов", function() {
             assert.equal(catsGroupGenerate(999).length, 999);
         });
         it("Возврат имен", function() {
-            assert.equal(back_Cat_Name(['Hell 2 m'])[0], ['Hell ']);
+            assert.equal(backCatName(['Hell 2 m'])[0], ['Hell ']);
         });
         it("Старые коты", function() {
-            assert.equal(oldCats(11), true);
+            var expected = 'number';
+            assert.equal(typeof(oldCats(11)), expected);
         });
         it("Молодые кошки", function() {
             assert.equal(youngCats().length, 0);
@@ -23,6 +24,7 @@ describe("Test", function() {
         it("Счетчик имен", function() {
             assert.equal(nameStats('Kail').length, 4);
         });
+
       }
   
       
