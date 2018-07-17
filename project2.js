@@ -18,7 +18,7 @@ export default class Cat {
 
 // Котофабрика
 export function catFactory() {
-
+  
   return cat
 }
 
