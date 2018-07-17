@@ -4,7 +4,7 @@
   "description": "Я , торжественно клянусь пройти данный курс до конца и стать самым лучшим back-end разработчиком.",
   "main": "project1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

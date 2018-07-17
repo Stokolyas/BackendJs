@@ -1,7 +1,7 @@
 'use strict'
 import {list} from "./project3.js";
 // возвращение имен котов
-function backCatName(list) {
+export function backCatName(list) {
     var backName = [''];
     for (var i = 0; i < list.length; i++) {
       if (list[i].name == 'Kail') {
@@ -22,7 +22,7 @@ function backCatName(list) {
     return backName
   }
   // старые коты    catList[i].substr(n+1,2)
-  function oldCats(n) {
+  export  function oldCats(n) {
     var countOldCats = 0
     var menCatArr = list.filter(function (item) {
       if (item.gender == 'm') {
@@ -38,7 +38,7 @@ function backCatName(list) {
     return countOldCats
   }
   // молодые кошки
-  function youngCats(n) {
+  export  function youngCats(n) {
     var nameYoungCats = []
     var womenCatArr = list.filter(function (item) {
       if (item.gender == 'w') {

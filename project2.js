@@ -17,7 +17,8 @@ export default class Cat {
 }
 
 // Котофабрика
-export function catFactory() {
+export function catFactory(gender = 'm') {
+  cat.gender = gender
   
   return cat
 }

@@ -4,7 +4,7 @@ import {
     list
 } from "./project3.js";
 
-function nameStats(list) {
+export function nameStats(list) {
     var catName = '',
         countName = [0, 0, 0, 0]
     list.forEach(function(item) {
