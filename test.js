@@ -8,9 +8,6 @@ import {nameStats} from "./project5.js"
 describe("Test", function() {
 
     describe("Класс кот", function() {
-  
-      function makeTest(cat) {
-        var expected = 'object';
         it("Котофабрика ", function() {
           assert.equal(typeof(catFactory()), expected);
         });
@@ -32,13 +29,7 @@ describe("Test", function() {
             assert.equal(nameStats('Kail').length, 4);
         });
 
-      }
-  
-      
-        makeTest();
-      
-  
+      });  
     });
   
     // ... дальнейшие тесты it и подблоки describe ...
-  });
