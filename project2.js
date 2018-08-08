@@ -1,11 +1,11 @@
 //2 task
 'use strict';
-import {pick} from "./project1.js";
+const pick = ('./project1');
 
 const catName = ['Kail', 'John', 'Hell', 'Gary']
 const catGender = ['m', 'w']
 
-export default class Cat {
+class Cat {
 
   constructor() {
     this.name = pick(catName)
@@ -17,11 +17,11 @@ export default class Cat {
 }
 
 // Котофабрика
-export function catFactory(gender = 'm') {
+function catFactory(gender,age,name) {
   cat.gender = gender
   
   return cat
 }
-
+export {catFactory};
 let cat = new Cat() // создание объекта класса
-catFactory() // вызов котофабрики
+catFactory(gender = 'm') // вызов котофабрики

@@ -1,8 +1,6 @@
 'use strict'
 // счетчик имен
-import {
-    list
-} from "./project3.js";
+import list from "./project3";
 
 export function nameStats(list) {
     var catName = '',

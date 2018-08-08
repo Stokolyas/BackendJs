@@ -1,9 +1,9 @@
-import {catFactory} from "./project2.js"
-import {catsGroupGenerate} from "./project3.js"
-import {backCatName} from "./project4.js"
-import {oldCats} from "./project4.js"
-import {youngCats} from "./project4.js"
-import {nameStats} from "./project5.js"
+import catFactory from './project2';
+import catsGroupGenerate from './project3'
+import backCatName from './project4'
+import oldCats from './project4'
+import {youngCats} from './project4'
+import {nameStats} from './project5'
 
 describe("Test", function() {
 
