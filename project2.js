@@ -5,7 +5,7 @@ const pick = require('./project1');
 const catName = ['Kail', 'John', 'Hell', 'Gary']
 const catGender = ['m', 'w']
 
-class Cat {
+module.exports = class Cat {
 
   constructor() {
     this.name = pick(catName)
@@ -22,6 +22,6 @@ function catFactory(gender,age,name) {
   
   return cat
 }
-export {catFactory};
+module.exports = catFactory;
 let cat = new Cat() // создание объекта класса
 catFactory(gender = 'm') // вызов котофабрики

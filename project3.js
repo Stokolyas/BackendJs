@@ -4,7 +4,7 @@ const pick = require('./project1');
 const catFactory = require('./project2');
 const Cat = require('./project2');
 // генерация групп котов
-export default function catsGroupGenerate(n, legsCount = 4) {
+module.exports = function catsGroupGenerate(n, legsCount = 4) {
   var catList = []
   for (var i = 0; i < n; i++) {
     let cat = new Cat()
@@ -15,5 +15,5 @@ export default function catsGroupGenerate(n, legsCount = 4) {
   return catList //возвращение массива котов
 }
 
-export default list = []
+module.exports = list = []
 list = catsGroupGenerate(9) // генерация массива котов

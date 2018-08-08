@@ -2,7 +2,7 @@
 // счетчик имен
 const list = require('./project3');
 
-export function nameStats(list) {
+module.exports = function nameStats(list) {
     var catName = '',
         countName = [0, 0, 0, 0]
     list.forEach(function(item) {
