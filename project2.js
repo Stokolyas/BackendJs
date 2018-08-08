@@ -23,5 +23,3 @@ function catFactory(gender,age,name) {
   return cat
 }
 module.exports = catFactory;
-let cat = new Cat() // создание объекта класса
-catFactory(gender = 'm') // вызов котофабрики

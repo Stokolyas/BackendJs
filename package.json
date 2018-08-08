@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Stokolyas/BackendJs/issues"
   },
-  "homepage": "https://github.com/Stokolyas/BackendJs#readme"
+  "homepage": "https://github.com/Stokolyas/BackendJs#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
