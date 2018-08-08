@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Stokolyas/BackendJs#readme",
   "devDependencies": {
     "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

@@ -14,6 +14,6 @@ module.exports = function catsGroupGenerate(n, legsCount = 4) {
   
   return catList //возвращение массива котов
 }
-var list = []
-list = catsGroupGenerate(9) // генерация массива котов
+var list = catsGroupGenerate(9) // генерация массива котов
+
 module.exports = list
