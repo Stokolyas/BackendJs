@@ -1,9 +1,9 @@
-import catFactory from './project2';
-import catsGroupGenerate from './project3'
-import backCatName from './project4'
-import oldCats from './project4'
-import {youngCats} from './project4'
-import {nameStats} from './project5'
+const catFactory = require('./project2');
+const catsGroupGenerate = require('./project3');
+const backCatName = require('./project4');
+const oldCats = require('./project4');
+const youngCats = require('./project4');
+const nameStats = require('./project5');
 
 describe("Test", function() {
 

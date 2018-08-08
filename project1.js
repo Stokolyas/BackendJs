@@ -6,5 +6,5 @@ function pick(list) {
   var randomPick = Math.floor(Math.random(max) * (max - min + 1)) + min;
   return list[randomPick]
 }
-export {pick};
+export default pick;
 pick(list)

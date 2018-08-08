@@ -1,6 +1,6 @@
 'use strict'
 // счетчик имен
-import list from "./project3";
+const list = require('./project3');
 
 export function nameStats(list) {
     var catName = '',

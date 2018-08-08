@@ -1,6 +1,6 @@
 //2 task
 'use strict';
-const pick = ('./project1');
+const pick = require('./project1');
 
 const catName = ['Kail', 'John', 'Hell', 'Gary']
 const catGender = ['m', 'w']

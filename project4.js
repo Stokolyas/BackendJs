@@ -1,5 +1,5 @@
 'use strict'
-import list from "./project3";
+const list = require('./project3');
 // возвращение имен котов
 export default function backCatName(list) {
     var backName = [''];

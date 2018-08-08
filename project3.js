@@ -1,8 +1,8 @@
 //1 - 5
 'use strict';
-import pick from "./project1";
-import catFactory from "./project2";
-import Cat from "./project2";
+const pick = require('./project1');
+const catFactory = require('./project2');
+const Cat = require('./project2');
 // генерация групп котов
 export default function catsGroupGenerate(n, legsCount = 4) {
   var catList = []
