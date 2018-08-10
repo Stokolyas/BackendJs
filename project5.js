@@ -1,11 +1,13 @@
 'use strict'
 // счетчик имен
-const list = require('./project3');
+const catsGroupGenerate = require('./project3');
 
-module.exports = function nameStats(list) {
-    var catName = '',
-        countName = [0, 0, 0, 0]
-    list.forEach(function(item) {
+var list = [];
+list = catsGroupGenerate();
+
+function nameStats(list) {
+    var countName = [0, 0, 0, 0]
+    list.forEach(function(item,i,list) {
         for (const key in item) {
             switch (item[key]) { //обработка каждого первого символа
                 case 'Kail':
@@ -28,4 +30,4 @@ module.exports = function nameStats(list) {
 
     return countName
 }
-var NamesCats = nameStats(list) //счет имен котов
+module.exports = nameStats;

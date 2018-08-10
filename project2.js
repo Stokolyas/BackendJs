@@ -17,9 +17,8 @@ module.exports = class Cat {
 }
 
 // Котофабрика
-function catFactory(gender,age,name) {
+function catFactory(cat,gender) {
   cat.gender = gender
-  
   return cat
 }
 module.exports = catFactory;

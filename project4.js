@@ -1,7 +1,7 @@
 'use strict'
 const list = require('./project3');
 // возвращение имен котов
-module.exports = function backCatName(list) {
+function backCatName(list) {
     var backName = [''];
     for (var i = 0; i < list.length; i++) {
       if (list[i].name == 'Kail') {
@@ -21,6 +21,7 @@ module.exports = function backCatName(list) {
 
     return backName
   }
+  module.exports = backCatName;
   // старые коты    catList[i].substr(n+1,2)
   module.exports =  function oldCats(n) {
     var countOldCats = 0
@@ -38,7 +39,7 @@ module.exports = function backCatName(list) {
     return countOldCats
   }
   // молодые кошки
-  module.exports = function youngCats(n) {
+function youngCats(n) {
     var nameYoungCats = []
     var womenCatArr = list.filter(function (item) {
       if (item.gender == 'w') {
@@ -52,6 +53,4 @@ module.exports = function backCatName(list) {
     });
     return nameYoungCats
   }
-var listName = backCatName(list) // вывод имен котов
-oldCats(9)
-youngCats(9)
+  module.exports = youngCats
