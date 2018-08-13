@@ -5,6 +5,7 @@ const oldCats = require('../project4');
 const youngCats = require('../project4');
 const nameStats = require('../project5');
 
+
 var assert = require('assert');
 describe('Test', function() {
     describe('Класс кот', function() {
@@ -16,11 +17,11 @@ describe('Test', function() {
             assert.equal(catsGroupGenerate(999).length, 999);
         });
         it("Возврат имен", function() {
-            assert.equal(backCatName(['Hell 2 m'])[0], ['Hell ']);
+            assert.equal(typeof(backCatName()), 'object');
         });
         it("Старые коты", function() {
-            var expected = 'number';
-            assert.equal(typeof(oldCats(11)), expected);
+            var expected = 'object';
+            assert.equal(typeof(oldCats(3)), expected);
         });
         it("Молодые кошки", function() {
             assert.equal(youngCats().length, 0);

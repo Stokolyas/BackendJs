@@ -17,10 +17,10 @@ class Cat {
 }
 module.exports =  Cat;
 // Котофабрика
-function catFactory(gender) {
+function catFactory(gender = 'm', name) {
   let cat = new Cat()
   cat.gender = gender
   return cat
 }
 module.exports = catFactory;
-catFactory('m')
+

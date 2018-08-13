@@ -1,5 +1,7 @@
 'use strict'
-const list = require('./project3');
+const catsGroupGenerate = require('./project3');
+var list
+  list = catsGroupGenerate(3)
 // возвращение имен котов
 function backCatName(list) {
     var backName = [''];
@@ -23,7 +25,7 @@ function backCatName(list) {
   }
   module.exports = backCatName;
   // старые коты    catList[i].substr(n+1,2)
-  module.exports =  function oldCats(n) {
+  function oldCats(n) {
     var countOldCats = 0
     var menCatArr = list.filter(function (item) {
       if (item.gender == 'm') {
@@ -35,15 +37,16 @@ function backCatName(list) {
         countOldCats += 1
       }
     });
-
+    
     return countOldCats
   }
+  module.exports = oldCats;
   // молодые кошки
 function youngCats(n) {
     var nameYoungCats = []
-    var womenCatArr = list.filter(function (item) {
-      if (item.gender == 'w') {
-        return item
+    var womenCatArr = list.filter(function (number) {
+      if (number.gender == 'w') {
+        return number;
       }
     });
     womenCatArr.forEach(function (item) { 
@@ -51,6 +54,7 @@ function youngCats(n) {
         nameYoungCats += item.name
       }
     });
-    return nameYoungCats
+    return nameYoungCats;
   }
+  backCatName(list)
   module.exports = youngCats
