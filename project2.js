@@ -5,7 +5,7 @@ const pick = require('./project1');
 const catName = ['Kail', 'John', 'Hell', 'Gary']
 const catGender = ['m', 'w']
 
-module.exports = class Cat {
+class Cat {
 
   constructor() {
     this.name = pick(catName)
@@ -15,10 +15,12 @@ module.exports = class Cat {
     this.tailLength = Math.floor(Math.random(2, 30) * (30 - 1) + 2)
   }
 }
-
+module.exports =  Cat;
 // Котофабрика
-function catFactory(cat,gender) {
+function catFactory(gender) {
+  let cat = new Cat()
   cat.gender = gender
   return cat
 }
 module.exports = catFactory;
+catFactory('m')

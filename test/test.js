@@ -9,11 +9,10 @@ var assert = require('assert');
 describe('Test', function() {
     describe('Класс кот', function() {
         it('Котофабрика ', function() {
-          assert.equal(typeof(catFactory(['Hell 2 m'],'m')), 'object');
+          assert.equal(typeof(catFactory('m')), 'object');
         });
         
         it("Генератор массива котов", function() {
-            console.log(catsGroupGenerate(1))
             assert.equal(catsGroupGenerate(999).length, 999);
         });
         it("Возврат имен", function() {
