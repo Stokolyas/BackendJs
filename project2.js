@@ -20,7 +20,6 @@ module.exports =  Cat;
 function catFactory(gender = 'm', name, loudness) {
   let cat = new Cat()
   cat.gender = gender
-  cat.age = loudness
   return cat
 }
 module.exports = catFactory;
