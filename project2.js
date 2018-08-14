@@ -17,9 +17,10 @@ class Cat {
 }
 module.exports =  Cat;
 // Котофабрика
-function catFactory(gender = 'm', name) {
+function catFactory(gender = 'm', name, loudness) {
   let cat = new Cat()
   cat.gender = gender
+  cat.age = loudness
   return cat
 }
 module.exports = catFactory;
