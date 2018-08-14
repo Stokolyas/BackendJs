@@ -29,7 +29,9 @@ describe('Test', function() {
         it("Счетчик имен", function() {
             assert.equal(nameStats('Kail').length, 4);
         });
-
+        it("loudness", function() {
+            assert.equal(catFactory('m','Kail', 5).age, 5);
+        });
       });  
     });
   
