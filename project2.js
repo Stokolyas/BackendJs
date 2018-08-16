@@ -15,13 +15,14 @@ class Cat {
     this.tailLength = Math.floor(Math.random(2, 30) * (30 - 1) + 2)
   }
 }
-module.exports =  Cat;
+
 // Котофабрика
-function catFactory(gender = 'm', name, loudness) {
+function catFactory(name,age = 10,gender = 'm',legsCount, tailLength, loudness) {
   let cat = new Cat()
   cat.gender = gender
-  cat.age = loudness
+  cat.age = age
+  loudness +=1
   return cat
 }
-module.exports = catFactory;
+module.exports = Cat,catFactory;
 

@@ -2,30 +2,18 @@
 const catsGroupGenerate = require('./project3');
 var list
   list = catsGroupGenerate(3)
-// возвращение имен котов
+  // возвращение имен котов
 function backCatName(list) {
-    var backName = [''];
-    for (var i = 0; i < list.length; i++) {
-      if (list[i].name == 'Kail') {
-        backName[i] = 'Kail '
-      }
-      if (list[i].name == 'Hell') {
-        backName[i] = 'Hell '
-  
-      }
-      if (list[i].name == 'Gary') {
-        backName[i] = 'Gary '
-      }
-      if (list[i].name == 'John') {
-        backName[i] = 'John '
-      }
-    }
-
+    var backName = [];
+    list.forEach(function (item){
+      backName.push(item.name)
+    });
     return backName
   }
-  module.exports = backCatName;
+
+  
   // старые коты    catList[i].substr(n+1,2)
-  function oldCats(n) {
+  function oldCats(list) {
     var countOldCats = 0
     var menCatArr = list.filter(function (item) {
       if (item.gender == 'm') {
@@ -40,11 +28,11 @@ function backCatName(list) {
     
     return countOldCats
   }
-  module.exports = oldCats;
+  
   // молодые кошки
-function youngCats(n) {
+function youngCats(list) {
     var nameYoungCats = []
-    var womenCatArr = list.filter(function (number) {
+    var womenCatArr = list.filter(function (number) { 
       if (number.gender == 'w') {
         return number;
       }
@@ -56,5 +44,5 @@ function youngCats(n) {
     });
     return nameYoungCats;
   }
-  backCatName(list)
-  module.exports = youngCats
+var name = backCatName(list)
+module.exports = backCatName,youngCats,oldCats;

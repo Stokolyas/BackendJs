@@ -1,4 +1,5 @@
 const catFactory = require('../project2');
+const Cat = require('../project2');
 const catsGroupGenerate = require('../project3');
 const backCatName = require('../project4');
 const oldCats = require('../project4');

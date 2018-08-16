@@ -1,32 +1,28 @@
 'use strict'
 // счетчик имен
 const catsGroupGenerate = require('./project3');
+const backCatName = require('./project4')
 var list
-  list = catsGroupGenerate(3)
+list = catsGroupGenerate(9)
 
 function nameStats(list) {
-    var countName = [0, 0, 0, 0]
-    for (const item in list) {
-        for (const key in item) {
-            switch (item[key]) { //обработка каждого первого символа
-                case 'Kail':
-                    ++countName[0]
-                    break;
-                case 'John':
-                    ++countName[1]
-                    break;
-                case 'Hell':
-                    ++countName[2]
-                    break;
-                case 'Gary':
-                    ++countName[3]
-                    break;
-                default:
-
+    var countName = new Map(), names
+    countName.set('Kail', 0)
+    names = backCatName(list)
+    names.forEach((item) => {
+        countName.forEach((value, key, countName) => {
+            value = countName.get(item)
+            if (value !== value) {
+                value=1
             }
-        }
-    }
-    
+            countName.set(item, value)
+                if (item === key){
+                    value = countName.get(key)
+                    countName.set(key, value+1)
+                }
+        })
+    })
+    console.log(countName)
     return countName
 }
 nameStats(list)
